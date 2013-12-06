@@ -31,6 +31,9 @@ Vagrant.configure("2") do |config|
     ]
     chef.roles_path = "roles"
 
+    # Add custom recipes
+    chef.add_recipe "vim"
+
     # Prepare chef JSON
     chef.json = vdd_config
 
