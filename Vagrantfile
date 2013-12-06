@@ -36,6 +36,7 @@ Vagrant.configure("2") do |config|
 
     # Run custom scripts
     config.vm.provision :shell, :path => File.join(File.dirname(__FILE__), "scripts", "install-mongo.sh")
+    config.vm.provision :shell, :path => File.join(File.dirname(__FILE__), "scripts", "install-screen.sh")
 
     # Prepare chef JSON
     chef.json = vdd_config
