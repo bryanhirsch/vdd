@@ -34,6 +34,9 @@ Vagrant.configure("2") do |config|
     # Add custom recipes
     chef.add_recipe "vim"
 
+    # Run custom scripts
+    config.vm.provision :shell, :path => File.join(File.dirname(__FILE__), "scripts", "install-mongo.sh")
+
     # Prepare chef JSON
     chef.json = vdd_config
 
