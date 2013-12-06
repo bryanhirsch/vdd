@@ -5,8 +5,8 @@ Vagrant.configure("2") do |config|
   vdd_config = JSON.parse(File.read(vdd_config_path))
 
   # Base box
-  config.vm.box = "precise32"
-  config.vm.box_url = "http://files.vagrantup.com/precise32.box"
+  config.vm.box = "precise64"
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
   # Networking
   config.vm.network :private_network, ip: vdd_config["ip"]
